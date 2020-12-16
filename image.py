@@ -18,3 +18,11 @@ class inputImage:
 
     def image_info(self):
         return f'image: {self._file_path}, shape: {self._img.shape}, size: {self._img.size}'
+
+    @property
+    def file_path(self)->str:
+        return self._file_path
+
+    @property
+    def img(self)->np.ndarray:
+        return self._img

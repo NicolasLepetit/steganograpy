@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from image import inputImage
+from message import Message
 
 __author__ = 'Nicolas.L'
 __version__ = "0.0.0"
@@ -14,7 +15,10 @@ def main():
     parser.add_argument('--message', '-m', dest="message", help='Message to hide', default='')
     args = parser.parse_args()
     i1 = inputImage(args.image)
+    m1 = Message(args.message)
     print(i1.image_info())
+    print(m1)
+    print(m1.message)
 
 
 if __name__ == '__main__':
