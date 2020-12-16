@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from image import inputImage
-__author__ = 'Nico'
+
+__author__ = 'Nicolas.L'
 __version__ = "0.0.0"
 __date__ = '12/2020'
 module_name = 'SteganograPy: a Python module to hide Messages in Images'
@@ -13,7 +14,7 @@ def main():
     parser.add_argument('--message', '-m', dest="message", help='Message to hide', default='')
     args = parser.parse_args()
     i1 = inputImage(args.image)
-    print(i1)
+    print(i1.image_info())
 
 
 if __name__ == '__main__':
