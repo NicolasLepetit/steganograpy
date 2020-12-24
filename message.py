@@ -11,3 +11,9 @@ class Message:
     @property
     def message(self):
         return self._message
+
+    def bytesLength(self):
+        return len(self._message)
+
+    def binaryLength(self):
+        return 8*self.bytesLength()

@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+
 class inputImage:
     def __init__(self, file_path: str = ''):
         self._file_path = file_path
@@ -19,9 +20,15 @@ class inputImage:
         return f'image: {self._file_path}, shape: {self._img.shape}, size: {self._img.size}'
 
     @property
-    def file_path(self)->str:
+    def file_path(self) -> str:
         return self._file_path
 
     @property
-    def img(self)->np.ndarray:
+    def img(self) -> np.ndarray:
         return self._img
+
+    def size(self) -> int:
+        out = 1
+        for x in self._img.shape:
+            out *= x
+        return out
